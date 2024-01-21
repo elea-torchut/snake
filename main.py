@@ -5,6 +5,7 @@ import random
 
 # Initialisation de Pygame
 pygame.init()
+clock = pygame.time.Clock()
 
 # Paramètres du jeu
 largeur, hauteur = 800, 600
@@ -288,7 +289,7 @@ while True:
 
         # Limiter la vitesse du jeu
         clock.tick(vitesse)
-elif choix == "scores":
+        if choix == "scores":
     # Afficher les scores
-    scores = charger_scores()
-    afficher_scores_ecran(scores)
+            scores = charger_scores()
+            afficher_scores_ecran(scores)
